@@ -301,7 +301,9 @@ const Movies = () => {
           }}
         />
       </form>
-      <h2>맞춘 갯수: {count}</h2>
+      <h2 className="correct_count">
+        맞춘 갯수: <b>{count}</b>
+      </h2>
     </div>
   );
 };
