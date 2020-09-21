@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  font-family: "Jua", sans-serif;
+}
+.title {
+  padding-top: 50px;
+  text-align: center;
+}
+.movie__poster {
+  width: 230px;
+}
+.movie__year__input {
+  font-family: "Jua", sans-serif;
+  letter-spacing: 2px;
+  font-size: 15px;
+  width: 167px;
+  height: 30px;
+  padding-left: 10px;
+}
+.movie__year__button {
+  font-family: "Jua", sans-serif;
+  font-size: 15px;
+  height: 35px;
+  margin-left: 5px;
+}
