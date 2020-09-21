@@ -12,3 +12,24 @@
   padding: 20px;
   color: black;
 }
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  font-family: "Jua", sans-serif;
+}
+.home {
+  text-align: center;
+  margin-top: 200px;
+}
+.home h3 {
+  color: red;
+}
+.home h2 {
+  margin-top: 60px;
+}
+.home h2 b {
+  color: blue;
+}
