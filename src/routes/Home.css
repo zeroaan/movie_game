@@ -34,3 +34,15 @@ body {
   height: 100vh;
   z-index: -1;
 }
+
+@media screen and (max-width: 500px) {
+  .home h1 {
+    font-size: 22px;
+  }
+  .home h2 {
+    font-size: 20px;
+  }
+  .home h3 {
+    font-size: 18px;
+  }
+}
