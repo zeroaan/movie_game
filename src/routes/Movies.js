@@ -24,48 +24,50 @@ const Movies = () => {
     mode = (
       <div>
         <h1 className="title">{movie.title}</h1>
-        <img
-          className="movie__poster"
-          src={movie.poster}
-          alt={movie.title}
-          title={movie.title}
-        />
-        <form className="movie__form">
-          <input
-            className="movie__year__input"
-            type="text"
-            value={value}
-            placeholder="개봉년도 입력 (숫자만 입력)"
-            onChange={(e) => {
-              setValue(e.target.value);
-            }}
+        <div className="movie__box">
+          <img
+            className="movie__poster"
+            src={movie.poster}
+            alt={movie.title}
+            title={movie.title}
           />
-          <input
-            className="movie__year__button"
-            type="submit"
-            value="확인"
-            onClick={(e) => {
-              e.preventDefault();
-              if (Number(value) === movie.year) {
-                count += 1;
-                if (highscore < count) {
-                  highscore = count;
+          <form className="movie__form">
+            <input
+              className="movie__year__input"
+              type="text"
+              value={value}
+              placeholder="개봉년도 입력 (숫자만 입력)"
+              onChange={(e) => {
+                setValue(e.target.value);
+              }}
+            />
+            <input
+              className="movie__year__button"
+              type="submit"
+              value="확인"
+              onClick={(e) => {
+                e.preventDefault();
+                if (Number(value) === movie.year) {
+                  count += 1;
+                  if (highscore < count) {
+                    highscore = count;
+                  }
+                  setMovie(items[count]);
+                  setValue("");
+                } else {
+                  items = shuffle(movies);
+                  count = 0;
+                  setMovie(items[count]);
+                  setValue("");
+                  setIncorrect(true);
                 }
-                setMovie(items[count]);
-                setValue("");
-              } else {
-                items = shuffle(movies);
-                count = 0;
-                setMovie(items[count]);
-                setValue("");
-                setIncorrect(true);
-              }
-            }}
-          />
-        </form>
-        <h2 className="correct_count">
-          맞춘 갯수: <b>{count}</b>
-        </h2>
+              }}
+            />
+          </form>
+          <h2 className="correct_count">
+            맞춘 갯수: <b>{count}</b>
+          </h2>
+        </div>
       </div>
     );
   } else {

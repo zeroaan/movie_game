@@ -120,7 +120,12 @@ body {
   }
 }
 
-/* For below 768px screen width */
+@media screen and (max-width: 1500px) {
+  .title {
+    font-size: 50px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .App {
     display: flex;
@@ -131,6 +136,7 @@ body {
   .title {
     padding-top: 50px;
     text-align: center;
+    font-size: 33px;
   }
   .movie__poster {
     width: 230px;
@@ -216,6 +222,12 @@ body {
     color: white;
     border-radius: 10px;
   }
+  .movie__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -239,5 +251,27 @@ body {
   }
   .movie__re {
     font-size: 18px;
+  }
+  .movie__background--left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  .movie__background--right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  .movie__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
