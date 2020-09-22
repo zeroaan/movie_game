@@ -3,7 +3,6 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   font-family: "Jua", sans-serif;
 }
 .home {
@@ -18,4 +17,20 @@ body {
 }
 .home h2 b {
   color: blue;
+}
+.movie__background--left {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
+}
+.movie__background--right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
 }

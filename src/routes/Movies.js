@@ -11,6 +11,7 @@ const shuffle = (array) => {
 };
 let items = shuffle(movies);
 let count = 0;
+let highscore = 0;
 
 const Movies = () => {
   const [value, setValue] = useState("");
@@ -18,6 +19,20 @@ const Movies = () => {
 
   return (
     <div className="App">
+      <div
+        className="movie__background--left"
+        style={{
+          background: `center/cover no-repeat url(${movie.poster})`,
+          opacity: "0.4",
+        }}
+      ></div>
+      <div
+        className="movie__background--right"
+        style={{
+          background: `center/cover no-repeat url(${movie.poster})`,
+          opacity: "0.4",
+        }}
+      ></div>
       <h1 className="title">{movie.title}</h1>
       <img
         className="movie__poster"
@@ -25,12 +40,14 @@ const Movies = () => {
         alt={movie.title}
         title={movie.title}
       />
-      <form>
+      <h4 className="movie__highscore">최고 점수: {highscore}</h4>
+      <h4 className="movie__currentscore">현재 점수: {count}</h4>
+      <form className="movie__form">
         <input
           className="movie__year__input"
           type="text"
           value={value}
-          placeholder="개봉년도 입력"
+          placeholder="개봉년도 입력 (숫자만 입력)"
           onChange={(e) => {
             setValue(e.target.value);
           }}
@@ -43,6 +60,9 @@ const Movies = () => {
             e.preventDefault();
             if (Number(value) === movie.year) {
               count += 1;
+              if (highscore < count) {
+                highscore = count;
+              }
               setMovie(items[count]);
               setValue("");
             } else {

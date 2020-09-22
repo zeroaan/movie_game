@@ -1,16 +1,17 @@
 .nav {
   position: relative;
-  top: 30px;
+  top: 20px;
   margin: auto;
   width: 160px;
-  background-color: rgb(108, 130, 255);
+  background-color: black;
   border-radius: 30px;
   padding: 15px 10px;
+  z-index: 1000;
 }
 .nav a {
   text-decoration: none;
   padding: 20px;
-  color: black;
+  color: white;
 }
 .notfound {
   display: flex;
