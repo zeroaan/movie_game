@@ -4,6 +4,14 @@ import Home from "./routes/Home";
 import Movies from "./routes/Movies";
 import "./App.css";
 
+const isNotFound = () => {
+  return (
+    <div className="notfound">
+      <h2>Not found...</h2>
+    </div>
+  );
+};
+
 const App = () => {
   return (
     <div className="App">
@@ -16,7 +24,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact={true} component={Home} />
         <Route path="/movies" component={Movies} />
-        <Route path="/">Not found</Route>
+        <Route component={isNotFound} />
       </Switch>
     </div>
   );
