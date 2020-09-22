@@ -93,6 +93,24 @@ body {
     right: 20px;
     font-size: 25px;
   }
+  .movie__incorrect {
+    display: flex;
+    flex-direction: column;
+  }
+  .movie__wrong {
+    margin-top: 200px;
+    text-align: center;
+  }
+  .movie__re {
+    font-family: "Jua", sans-serif;
+    margin: auto;
+    width: 80px;
+    height: 50px;
+    outline: none;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 10px;
+  }
 }
 
 /* For below 768px screen width */
@@ -114,7 +132,7 @@ body {
   .movie__year__input {
     font-family: "Jua", sans-serif;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 12px;
     width: 170px;
     height: 30px;
     padding-left: 10px;
@@ -156,5 +174,17 @@ body {
     width: 50vw;
     height: 100vh;
     z-index: -1;
+  }
+  .movie__highscore {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 25px;
+  }
+  .movie__currentscore {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 25px;
   }
 }
