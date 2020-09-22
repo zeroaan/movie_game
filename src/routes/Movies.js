@@ -9,6 +9,7 @@ const shuffle = (array) => {
   }
   return array;
 };
+shuffle(movies);
 let items = shuffle(movies);
 let count = 0;
 let highscore = 0;

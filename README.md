@@ -1,7 +1,7 @@
 # movie_app
 
-1. 일단 movies를 shuffle 해서 items으로 섞는다.
-2. items를 사용해서 map으로 movie 컴포넌트를 하나씩 만든다.
-   만드는게 맞는지는 모르겠는데 해보고 하나만 출력시켜 본다.
-   하나만 출력하는게 될지는 모르겠음
-3. 일단은 여기까지
+1. 이번에 할 거는 return 문 밖에서 if (mode === false) {계속 진행}
+   else {틀린 컴포넌트로} 가는 조건문을 만든다.
+2. 기본값은 false이고 useState, setMode(?) 를 통해
+   Number(value) !== movie.year 일때, mode를 true로 바꾸면?
+3. 다른 컴포넌트로 이동할 거 같은데?
