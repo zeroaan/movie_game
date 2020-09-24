@@ -9,13 +9,13 @@ const shuffle = (array) => {
   }
   return array;
 };
-shuffle(movies);
-let items = shuffle(movies);
-let count = 0;
-let highscore = 0;
 
 const Movies = () => {
+  const [count, setCount] = useState(0);
+  const [currentscore, setCurrentscore] = useState(0);
+  const [highscore, setHighscore] = useState(0);
   const [value, setValue] = useState("");
+  const [items, setItems] = useState(shuffle(movies));
   const [movie, setMovie] = useState(items[count]);
   const [incorrect, setIncorrect] = useState(false);
 
@@ -48,15 +48,16 @@ const Movies = () => {
               onClick={(e) => {
                 e.preventDefault();
                 if (Number(value) === movie.year) {
-                  count += 1;
-                  if (highscore < count) {
-                    highscore = count;
+                  setCount(count + 1);
+                  if (highscore <= count) {
+                    setHighscore(count + 1);
                   }
                   setMovie(items[count]);
                   setValue("");
                 } else {
-                  items = shuffle(movies);
-                  count = 0;
+                  setItems(shuffle(movies));
+                  setCurrentscore(count);
+                  setCount(0);
                   setMovie(items[count]);
                   setValue("");
                   setIncorrect(true);
@@ -73,7 +74,11 @@ const Movies = () => {
   } else {
     mode = (
       <div className="movie__incorrect">
-        <h1 className="movie__wrong">개봉년도가 맞지 않습니다</h1>
+        <h1 className="movie__wrong">틀렸습니다. 개봉년도가 맞지 않습니다.</h1>
+        <h2 className="movie__count">
+          맞춘 갯수: {currentscore}
+          <br /> 최고 점수: {highscore}
+        </h2>
         <h2 className="movie__wrongre">다시하려면 아래 버튼을 누르세요</h2>
         <input
           type="button"

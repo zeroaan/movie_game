@@ -15,24 +15,12 @@ body {
 .home h2 {
   margin-top: 60px;
 }
-.home h2 b {
+.movie__start {
+  font-family: "Jua", sans-serif;
   color: blue;
-}
-.movie__background--left {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 50vw;
-  height: 100vh;
-  z-index: -1;
-}
-.movie__background--right {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50vw;
-  height: 100vh;
-  z-index: -1;
+  margin: 0 8px;
+  text-decoration: none;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 500px) {
@@ -41,6 +29,9 @@ body {
   }
   .home h2 {
     font-size: 20px;
+  }
+  .movie__start {
+    font-size: 25px;
   }
   .home h3 {
     font-size: 18px;

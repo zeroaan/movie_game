@@ -98,10 +98,15 @@ body {
 .movie__incorrect {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .movie__wrong {
   margin-top: 200px;
   text-align: center;
+}
+.movie__count {
+  color: blue;
 }
 .movie__wrongre {
   color: red;
@@ -222,6 +227,9 @@ body {
     margin-top: 200px;
     text-align: center;
   }
+  .movie__count {
+    color: blue;
+  }
   .movie__wrongre {
     color: red;
   }
@@ -338,6 +346,9 @@ body {
     margin-top: 200px;
     text-align: center;
   }
+  .movie__count {
+    color: blue;
+  }
   .movie__wrongre {
     color: red;
   }
@@ -375,6 +386,9 @@ body {
   }
   .movie__wrong {
     font-size: 22px;
+  }
+  .movie__count {
+    font-size: 21px;
   }
   .movie__wrongre {
     font-size: 20px;
