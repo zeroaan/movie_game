@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/movie_game/static/css/main.b6793aec.chunk.css",
-    "main.js": "/movie_game/static/js/main.50cbad44.chunk.js",
-    "main.js.map": "/movie_game/static/js/main.50cbad44.chunk.js.map",
+    "main.css": "/movie_game/static/css/main.687b6744.chunk.css",
+    "main.js": "/movie_game/static/js/main.5dc8741b.chunk.js",
+    "main.js.map": "/movie_game/static/js/main.5dc8741b.chunk.js.map",
     "runtime-main.js": "/movie_game/static/js/runtime-main.965733c1.js",
     "runtime-main.js.map": "/movie_game/static/js/runtime-main.965733c1.js.map",
-    "static/js/2.f5c532e9.chunk.js": "/movie_game/static/js/2.f5c532e9.chunk.js",
-    "static/js/2.f5c532e9.chunk.js.map": "/movie_game/static/js/2.f5c532e9.chunk.js.map",
+    "static/js/2.977d6550.chunk.js": "/movie_game/static/js/2.977d6550.chunk.js",
+    "static/js/2.977d6550.chunk.js.map": "/movie_game/static/js/2.977d6550.chunk.js.map",
     "index.html": "/movie_game/index.html",
-    "precache-manifest.b0324930cd1cc331e537bb76918ba876.js": "/movie_game/precache-manifest.b0324930cd1cc331e537bb76918ba876.js",
+    "precache-manifest.0826cff0900e1545759ac08588e4ff7e.js": "/movie_game/precache-manifest.0826cff0900e1545759ac08588e4ff7e.js",
     "service-worker.js": "/movie_game/service-worker.js",
-    "static/css/main.b6793aec.chunk.css.map": "/movie_game/static/css/main.b6793aec.chunk.css.map",
-    "static/js/2.f5c532e9.chunk.js.LICENSE.txt": "/movie_game/static/js/2.f5c532e9.chunk.js.LICENSE.txt"
+    "static/css/main.687b6744.chunk.css.map": "/movie_game/static/css/main.687b6744.chunk.css.map",
+    "static/js/2.977d6550.chunk.js.LICENSE.txt": "/movie_game/static/js/2.977d6550.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.965733c1.js",
-    "static/js/2.f5c532e9.chunk.js",
-    "static/css/main.b6793aec.chunk.css",
-    "static/js/main.50cbad44.chunk.js"
+    "static/js/2.977d6550.chunk.js",
+    "static/css/main.687b6744.chunk.css",
+    "static/js/main.5dc8741b.chunk.js"
   ]
 }
