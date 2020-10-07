@@ -157,3 +157,9 @@ if (incorrect === false) {
   );
 }
 ```
+
+<br>
+
+#### 반응형으로 만들어주어 모바일, 태블릿에서도 이용할 수 있도록 하였다.
+
+![responsive](./img/responsive.png)
