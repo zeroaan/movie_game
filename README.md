@@ -1,8 +1,8 @@
-# movie_game
+# 영화 개봉년도 맞추기 게임
 
 - https://zeroaan.github.io/movie_game/
 - 기간 : 20년 9월 20일 ~ 9월 23일
-- 소개 : 영화 포스터를 보고 영화 개봉년도를 맞추는 게임
+- 소개 : React를 이용한 영화 게임으로 hooks 기반으로 만들었다. 페이지는 Home, Moives로 구성되어있고, 게임을 진행하는 컴포넌트에서 state를 생성하여 영화 포스터, 최고점수, 현재점수 등을 변경해주어 게임이 진행된다.
 
 <br>
 
@@ -90,12 +90,7 @@ if (incorrect === false) {
     <div>
       <h1 className="title">{movie.title}</h1>
       <div className="movie__box">
-        <img
-          className="movie__poster"
-          src={movie.poster}
-          alt={movie.title}
-          title={movie.title}
-        />
+        <img className="movie__poster" src={movie.poster} alt={movie.title} title={movie.title} />
         <form className="movie__form">
           <input
             className="movie__year__input"
