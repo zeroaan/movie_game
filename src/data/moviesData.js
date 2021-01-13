@@ -1,4 +1,12 @@
-const moviesData = [
+export const shuffle = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+  return array
+}
+
+const data = [
   {
     id: 70,
     title: "더킹",
@@ -414,3 +422,5 @@ const moviesData = [
     poster: "https://movie-phinf.pstatic.net/20190528_36/1559024198386YVTEw_JPEG/movie_image.jpg",
   },
 ]
+
+export const moviesData = shuffle(data)

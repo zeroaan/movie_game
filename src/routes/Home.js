@@ -1,16 +1,7 @@
-import React from "react";
-import "./Home.css";
-import movies from "./moviesData";
-import { Link } from "react-router-dom";
-
-const shuffle = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-};
-let items = shuffle(movies);
+import React from "react"
+import "./Home.css"
+import { moviesData } from "../data/moviesData"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   return (
@@ -18,14 +9,14 @@ const Home = () => {
       <div
         className="movie__background--left"
         style={{
-          background: `center/cover no-repeat url(${items[0].poster})`,
+          background: `center/cover no-repeat url(${moviesData[0].poster})`,
           opacity: "0.4",
         }}
       ></div>
       <div
         className="movie__background--right"
         style={{
-          background: `center/cover no-repeat url(${items[0].poster})`,
+          background: `center/cover no-repeat url(${moviesData[0].poster})`,
           opacity: "0.4",
         }}
       ></div>
@@ -41,7 +32,7 @@ const Home = () => {
         </h2>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

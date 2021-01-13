@@ -1,36 +1,23 @@
-import React, { useState } from "react";
-import "./Movies.css";
-import movies from "./moviesData";
-
-const shuffle = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-};
+import React, { useState } from "react"
+import "./Movies.css"
+import { moviesData, shuffle } from "../data/moviesData"
 
 const Movies = () => {
-  const [count, setCount] = useState(0);
-  const [currentscore, setCurrentscore] = useState(0);
-  const [highscore, setHighscore] = useState(0);
-  const [value, setValue] = useState("");
-  const [items, setItems] = useState(shuffle(movies));
-  const [movie, setMovie] = useState(items[count]);
-  const [incorrect, setIncorrect] = useState(false);
+  const [count, setCount] = useState(0)
+  const [currentscore, setCurrentscore] = useState(0)
+  const [highscore, setHighscore] = useState(0)
+  const [value, setValue] = useState("")
+  const [items, setItems] = useState(moviesData)
+  const [movie, setMovie] = useState(items[count])
+  const [incorrect, setIncorrect] = useState(false)
 
-  let mode = null;
+  let mode = null
   if (incorrect === false) {
     mode = (
       <div>
         <h1 className="title">{movie.title}</h1>
         <div className="movie__box">
-          <img
-            className="movie__poster"
-            src={movie.poster}
-            alt={movie.title}
-            title={movie.title}
-          />
+          <img className="movie__poster" src={movie.poster} alt={movie.title} title={movie.title} />
           <form className="movie__form">
             <input
               className="movie__year__input"
@@ -38,7 +25,7 @@ const Movies = () => {
               value={value}
               placeholder="개봉년도 입력 (숫자만 입력)"
               onChange={(e) => {
-                setValue(e.target.value);
+                setValue(e.target.value)
               }}
             />
             <input
@@ -46,21 +33,21 @@ const Movies = () => {
               type="submit"
               value="확인"
               onClick={(e) => {
-                e.preventDefault();
+                e.preventDefault()
                 if (Number(value) === movie.year) {
-                  setCount(count + 1);
+                  setCount(count + 1)
                   if (highscore <= count) {
-                    setHighscore(count + 1);
+                    setHighscore(count + 1)
                   }
-                  setMovie(items[count]);
-                  setValue("");
+                  setMovie(items[count])
+                  setValue("")
                 } else {
-                  setItems(shuffle(movies));
-                  setCurrentscore(count);
-                  setCount(0);
-                  setMovie(items[count]);
-                  setValue("");
-                  setIncorrect(true);
+                  setItems(shuffle(moviesData))
+                  setCurrentscore(count)
+                  setCount(0)
+                  setMovie(items[count])
+                  setValue("")
+                  setIncorrect(true)
                 }
               }}
             />
@@ -70,7 +57,7 @@ const Movies = () => {
           </h2>
         </div>
       </div>
-    );
+    )
   } else {
     mode = (
       <div className="movie__incorrect">
@@ -85,11 +72,11 @@ const Movies = () => {
           className="movie__re"
           value="다시하기"
           onClick={() => {
-            setIncorrect(false);
+            setIncorrect(false)
           }}
         ></input>
       </div>
-    );
+    )
   }
 
   return (
@@ -112,7 +99,7 @@ const Movies = () => {
       <h4 className="movie__currentscore">현재 점수: {count}</h4>
       {mode}
     </div>
-  );
-};
+  )
+}
 
-export default Movies;
+export default Movies
