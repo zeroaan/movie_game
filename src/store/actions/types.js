@@ -1,0 +1,1 @@
+export const SHUFFLE_MOVIE = "SHUFFLE_MOVIE"
