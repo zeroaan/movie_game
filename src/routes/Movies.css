@@ -67,19 +67,6 @@ body {
   font-size: 45px;
 }
 
-.movie__highscore {
-  position: absolute;
-  top: -15px;
-  left: 20px;
-  font-size: 25px;
-}
-.movie__currentscore {
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  font-size: 25px;
-}
-
 @media screen and (max-width: 1500px) {
   .title {
     font-size: 50px;
@@ -147,19 +134,6 @@ body {
     color: blue;
     font-size: 35px;
   }
-
-  .movie__highscore {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    font-size: 25px;
-  }
-  .movie__currentscore {
-    position: absolute;
-    top: -15px;
-    right: 20px;
-    font-size: 25px;
-  }
 }
 
 @media screen and (max-width: 900px) {
@@ -226,18 +200,6 @@ body {
     font-size: 25px;
   }
 
-  .movie__highscore {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    font-size: 25px;
-  }
-  .movie__currentscore {
-    position: absolute;
-    top: -15px;
-    right: 20px;
-    font-size: 25px;
-  }
   .movie__box {
     display: flex;
     flex-direction: column;
@@ -247,18 +209,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .movie__highscore {
-    position: absolute;
-    top: 45px;
-    left: 20px;
-    font-size: 25px;
-  }
-  .movie__currentscore {
-    position: absolute;
-    top: 45px;
-    right: 20px;
-    font-size: 25px;
-  }
   .movie__box {
     display: flex;
     flex-direction: column;
