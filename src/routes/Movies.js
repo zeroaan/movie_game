@@ -1,26 +1,27 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { shuffleMovie, plusScore, resetScore } from "store/actions/movie"
 import "./Movies.css"
-import { moviesData, shuffle } from "../data/moviesData"
 
 const Movies = () => {
-  const { moviesData } = useSelector((state) => state.movie)
+  const dispatch = useDispatch()
+  const { moviesData, score, prevScore, bestScore } = useSelector((state) => state.movie)
 
-  const [count, setCount] = useState(0)
-  const [currentscore, setCurrentscore] = useState(0)
-  const [highscore, setHighscore] = useState(0)
   const [value, setValue] = useState("")
-  const [items, setItems] = useState(moviesData)
-  const [movie, setMovie] = useState(items[count])
   const [incorrect, setIncorrect] = useState(false)
 
   let mode = null
   if (incorrect === false) {
     mode = (
       <div>
-        <h1 className="title">{movie.title}</h1>
+        <h1 className="title">{moviesData[score].title}</h1>
         <div className="movie__box">
-          <img className="movie__poster" src={movie.poster} alt={movie.title} title={movie.title} />
+          <img
+            className="movie__poster"
+            src={moviesData[score].poster}
+            alt={moviesData[score].title}
+            title={moviesData[score].title}
+          />
           <form className="movie__form">
             <input
               className="movie__year__input"
@@ -37,18 +38,12 @@ const Movies = () => {
               value="확인"
               onClick={(e) => {
                 e.preventDefault()
-                if (Number(value) === movie.year) {
-                  setCount(count + 1)
-                  if (highscore <= count) {
-                    setHighscore(count + 1)
-                  }
-                  setMovie(items[count])
+                if (Number(value) === moviesData[score].year) {
+                  dispatch(plusScore())
                   setValue("")
                 } else {
-                  setItems(shuffle(moviesData))
-                  setCurrentscore(count)
-                  setCount(0)
-                  setMovie(items[count])
+                  dispatch(shuffleMovie())
+                  dispatch(resetScore())
                   setValue("")
                   setIncorrect(true)
                 }
@@ -56,7 +51,7 @@ const Movies = () => {
             />
           </form>
           <h2 className="correct_count">
-            맞춘 갯수: <b>{count}</b>
+            맞춘 갯수: <b>{score}</b>
           </h2>
         </div>
       </div>
@@ -66,8 +61,8 @@ const Movies = () => {
       <div className="movie__incorrect">
         <h1 className="movie__wrong">틀렸습니다. 개봉년도가 맞지 않습니다.</h1>
         <h2 className="movie__count">
-          맞춘 갯수: {currentscore}
-          <br /> 최고 점수: {highscore}
+          맞춘 갯수: {prevScore}
+          <br /> 최고 점수: {bestScore}
         </h2>
         <h2 className="movie__wrongre">다시하려면 아래 버튼을 누르세요</h2>
         <input
@@ -87,19 +82,19 @@ const Movies = () => {
       <div
         className="movie__background--left"
         style={{
-          background: `center/cover no-repeat url(${movie.poster})`,
+          background: `center/cover no-repeat url(${moviesData[score].poster})`,
           opacity: "0.4",
         }}
       ></div>
       <div
         className="movie__background--right"
         style={{
-          background: `center/cover no-repeat url(${movie.poster})`,
+          background: `center/cover no-repeat url(${moviesData[score].poster})`,
           opacity: "0.4",
         }}
       ></div>
-      <h4 className="movie__highscore">최고 점수: {highscore}</h4>
-      <h4 className="movie__currentscore">현재 점수: {count}</h4>
+      <h4 className="movie__highscore">최고 점수: {bestScore}</h4>
+      <h4 className="movie__currentscore">현재 점수: {score}</h4>
       {mode}
     </div>
   )
