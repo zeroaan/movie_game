@@ -1,11 +1,12 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import Navbar from "./Navbar"
-import Home from "../routes/Home"
-import Movies from "../routes/Movies"
-import NotFound from "./NotFound"
 
-const Routes = () => {
+import Navbar from "components/Navbar"
+import Home from "routes/Home"
+import Movies from "routes/Movies"
+import NotFound from "components/NotFound"
+
+const Router = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
@@ -18,4 +19,4 @@ const Routes = () => {
   )
 }
 
-export default Routes
+export default Router
