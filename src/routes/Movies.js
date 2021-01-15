@@ -1,13 +1,15 @@
 import React, { useState } from "react"
 import { useSelector } from "react-redux"
-import "./Movies.css"
+
 import MovieGame from "components/MovieGame"
 import MovieRestart from "components/MovieRestart"
+
+import "./Movies.css"
 
 const Movies = () => {
   const { score, bestScore } = useSelector((state) => state.movie)
 
-  const [incorrect, setIncorrect] = useState(false)
+  const [incorrect, setIncorrect] = useState(true)
 
   let mode = null
   if (incorrect === false) {

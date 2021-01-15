@@ -79,33 +79,6 @@ body {
   right: 20px;
   font-size: 25px;
 }
-.movie__incorrect {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.movie__wrong {
-  margin-top: 200px;
-  text-align: center;
-}
-.movie__count {
-  color: blue;
-}
-.movie__wrongre {
-  color: red;
-}
-.movie__re {
-  font-family: "Jua", sans-serif;
-  margin: auto;
-  width: 80px;
-  height: 50px;
-  outline: none;
-  border: 3px solid black;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-}
 
 @media screen and (max-width: 1500px) {
   .title {
@@ -187,31 +160,6 @@ body {
     right: 20px;
     font-size: 25px;
   }
-  .movie__incorrect {
-    display: flex;
-    flex-direction: column;
-  }
-  .movie__wrong {
-    margin-top: 200px;
-    text-align: center;
-  }
-  .movie__count {
-    color: blue;
-  }
-  .movie__wrongre {
-    color: red;
-  }
-  .movie__re {
-    font-family: "Jua", sans-serif;
-    margin: auto;
-    width: 80px;
-    height: 50px;
-    outline: none;
-    border: 3px solid black;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-  }
 }
 
 @media screen and (max-width: 900px) {
@@ -290,31 +238,6 @@ body {
     right: 20px;
     font-size: 25px;
   }
-  .movie__incorrect {
-    display: flex;
-    flex-direction: column;
-  }
-  .movie__wrong {
-    margin-top: 200px;
-    text-align: center;
-  }
-  .movie__count {
-    color: blue;
-  }
-  .movie__wrongre {
-    color: red;
-  }
-  .movie__re {
-    font-family: "Jua", sans-serif;
-    margin: auto;
-    width: 80px;
-    height: 50px;
-    outline: none;
-    border: 3px solid black;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-  }
   .movie__box {
     display: flex;
     flex-direction: column;
@@ -335,18 +258,6 @@ body {
     top: 45px;
     right: 20px;
     font-size: 25px;
-  }
-  .movie__wrong {
-    font-size: 22px;
-  }
-  .movie__count {
-    font-size: 21px;
-  }
-  .movie__wrongre {
-    font-size: 20px;
-  }
-  .movie__re {
-    font-size: 18px;
   }
   .movie__box {
     display: flex;

@@ -4,9 +4,9 @@ import { useSelector } from "react-redux"
 import styled from "styled-components"
 
 const DivNav = styled.div`
-  position: relative;
+  position: absolute;
   top: 20px;
-  margin: auto;
+  left: calc(50% - 90px);
   width: 160px;
   background-color: black;
   border-radius: 30px;

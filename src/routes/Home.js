@@ -3,9 +3,6 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 const DivHome = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -17,7 +14,7 @@ const DivHome = styled.div`
     margin: 10px 0;
 
     &:nth-child(1) {
-      font-size: 35px;
+      font-size: 32px;
       @media screen and (max-width: 600px) {
         font-size: 22px;
       }
@@ -32,7 +29,7 @@ const DivHome = styled.div`
     }
 
     &:nth-child(3) {
-      font-size: 30px;
+      font-size: 28px;
       @media screen and (max-width: 600px) {
         font-size: 18px;
       }
