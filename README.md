@@ -14,7 +14,7 @@
 
 - 네이버 API를 가져와 랜덤으로 영화 포스터를 보여주려 했으나 네이버 API는 검색 query를 필수로 입력해야하기 때문에 이 프로젝트와는 목적이 맞지 않았다.
 - 외국 사이트의 영화 API를 가져와 사용해봤지만 외국 사이트다보니 모르는 영화가 너무 많아 게임 진행이 되지 않았다.
-- moviesData.json 이라는 파일을 만들어 직접 title, year, poster를 입력해주었다.
+- moviesData를 만들어 직접 title, year, poster를 입력해주었다.
 
 ```javascript
 // 약 70개의 영화
@@ -59,8 +59,8 @@ const App = () => {
         <Route component={isNotFound} />
       </Switch>
     </div>
-  );
-};
+  )
+}
 ```
 
 <br>
@@ -72,11 +72,11 @@ const App = () => {
 ```javascript
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return array;
-};
+  return array
+}
 ```
 
 <br>
@@ -84,7 +84,7 @@ const shuffle = (array) => {
 - 영화를 맞췄을 때와 틀렸을 때를 구분하기 위해서 incorrect state를 만들어 주었으며 false일 때는 게임진행, true일 때는 재도전화면이 보이게 만들었다.
 
 ```jsx
-let mode = null;
+let mode = null
 if (incorrect === false) {
   mode = (
     <div>
@@ -98,7 +98,7 @@ if (incorrect === false) {
             value={value}
             placeholder="개봉년도 입력 (숫자만 입력)"
             onChange={(e) => {
-              setValue(e.target.value);
+              setValue(e.target.value)
             }}
           />
           <input
@@ -106,21 +106,21 @@ if (incorrect === false) {
             type="submit"
             value="확인"
             onClick={(e) => {
-              e.preventDefault();
+              e.preventDefault()
               if (Number(value) === movie.year) {
-                setCount(count + 1);
+                setCount(count + 1)
                 if (highscore <= count) {
-                  setHighscore(count + 1);
+                  setHighscore(count + 1)
                 }
-                setMovie(items[count]);
-                setValue("");
+                setMovie(items[count])
+                setValue("")
               } else {
-                setItems(shuffle(movies));
-                setCurrentscore(count);
-                setCount(0);
-                setMovie(items[count]);
-                setValue("");
-                setIncorrect(true);
+                setItems(shuffle(movies))
+                setCurrentscore(count)
+                setCount(0)
+                setMovie(items[count])
+                setValue("")
+                setIncorrect(true)
               }
             }}
           />
@@ -130,7 +130,7 @@ if (incorrect === false) {
         </h2>
       </div>
     </div>
-  );
+  )
 } else {
   mode = (
     <div className="movie__incorrect">
@@ -145,11 +145,11 @@ if (incorrect === false) {
         className="movie__re"
         value="다시하기"
         onClick={() => {
-          setIncorrect(false);
+          setIncorrect(false)
         }}
       ></input>
     </div>
-  );
+  )
 }
 ```
 
