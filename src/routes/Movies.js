@@ -1,8 +1,11 @@
 import React, { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import "./Movies.css"
 import { moviesData, shuffle } from "../data/moviesData"
 
 const Movies = () => {
+  const { moviesData } = useSelector((state) => state.movie)
+
   const [count, setCount] = useState(0)
   const [currentscore, setCurrentscore] = useState(0)
   const [highscore, setHighscore] = useState(0)

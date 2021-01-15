@@ -18,6 +18,14 @@ const DivNav = styled.div`
     color: white;
   }
 `
+const DivBack = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
+`
 
 const Navbar = () => {
   return (
@@ -26,6 +34,21 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/movies">Start</Link>
       </DivNav>
+
+      <div
+        className="movie__background--left"
+        style={{
+          background: `center/cover no-repeat url(${movie.poster})`,
+          opacity: "0.4",
+        }}
+      ></div>
+      <div
+        className="movie__background--right"
+        style={{
+          background: `center/cover no-repeat url(${movie.poster})`,
+          opacity: "0.4",
+        }}
+      ></div>
     </>
   )
 }
