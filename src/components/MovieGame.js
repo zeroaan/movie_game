@@ -13,7 +13,6 @@ const DivPoster = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 700px) {
-    align-items: flex-end;
     width: 100vw;
     height: 65vh;
   }
@@ -21,6 +20,7 @@ const DivPoster = styled.div`
 const ImgPoster = styled.img`
   width: 28vw;
   @media screen and (max-width: 700px) {
+    margin-top: 30px;
     width: 220px;
   }
 `
