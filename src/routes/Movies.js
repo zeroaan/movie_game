@@ -5,8 +5,6 @@ import styled from "styled-components"
 import MovieGame from "components/MovieGame"
 import MovieRestart from "components/MovieRestart"
 
-import "./Movies.css"
-
 const H1HighScore = styled.h1`
   position: absolute;
   top: 15px;
