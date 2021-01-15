@@ -15,7 +15,7 @@ const DivHome = styled.div`
 
     &:nth-child(1) {
       font-size: 32px;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         font-size: 22px;
       }
     }
@@ -23,21 +23,21 @@ const DivHome = styled.div`
     &:nth-child(2) {
       font-size: 25px;
       color: rgb(255, 50, 50);
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         font-size: 15px;
       }
     }
 
     &:nth-child(3) {
       font-size: 28px;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         font-size: 18px;
       }
 
       > a {
         font-size: 35px;
         color: rgb(20, 20, 255);
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 700px) {
           font-size: 25px;
         }
       }

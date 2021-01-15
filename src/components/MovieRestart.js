@@ -15,7 +15,7 @@ const DivRestart = styled.div`
 
     &:nth-child(1) {
       font-size: 35px;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         font-size: 22px;
       }
     }
@@ -23,7 +23,7 @@ const DivRestart = styled.div`
     &:nth-child(2) {
       font-size: 28px;
       color: rgb(20, 20, 255);
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         font-size: 20px;
       }
     }
@@ -31,7 +31,7 @@ const DivRestart = styled.div`
     &:nth-child(3) {
       font-size: 30px;
       color: rgb(255, 50, 50);
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         font-size: 22px;
       }
     }
@@ -48,7 +48,7 @@ const ButtonRestart = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 12px;
     width: 60px;
     height: 40px;

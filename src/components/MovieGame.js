@@ -12,7 +12,7 @@ const DivPoster = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     align-items: flex-end;
     width: 100vw;
     height: 65vh;
@@ -20,7 +20,7 @@ const DivPoster = styled.div`
 `
 const ImgPoster = styled.img`
   width: 28vw;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     width: 220px;
   }
 `
@@ -35,7 +35,7 @@ const DivForm = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     left: 0;
     bottom: 0;
     width: 100vw;
@@ -46,7 +46,7 @@ const DivForm = styled.div`
 const H1Title = styled.h1`
   font-size: 4vw;
   margin-bottom: 30px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 35px;
     margin-bottom: 15px;
   }
@@ -62,7 +62,7 @@ const InputMovie = styled.input`
   outline: none;
   border: 3px solid black;
   border-radius: 5px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 14px;
     height: 35px;
   }
@@ -80,7 +80,7 @@ const ButtonMovie = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 14px;
     width: 48px;
     height: 44px;
@@ -91,7 +91,7 @@ const H2Score = styled.h2`
   width: 50vw;
   font-size: 2.8vw;
   margin-top: 50px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 24px;
     margin-top: 20px;
   }

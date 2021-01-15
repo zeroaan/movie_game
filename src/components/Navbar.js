@@ -29,14 +29,14 @@ const DivBackLeft = styled.div`
   opacity: 0.6;
   background: center/cover no-repeat url(${(props) => props.poster});
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     width: 100vw;
   }
 `
 const DivBackRight = styled(DivBackLeft)`
   left: 50%;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     display: none;
   }
 `

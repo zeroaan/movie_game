@@ -10,7 +10,7 @@ const H1HighScore = styled.h1`
   top: 15px;
   left: 20px;
   font-size: 25px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 18px;
   }
 `
@@ -19,7 +19,7 @@ const H1CurrentScore = styled.h1`
   top: 15px;
   right: 20px;
   font-size: 25px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     font-size: 18px;
   }
 `
