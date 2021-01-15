@@ -67,22 +67,6 @@ body {
   font-size: 45px;
 }
 
-.movie__background--left {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 50vw;
-  height: 100vh;
-  z-index: -1;
-}
-.movie__background--right {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50vw;
-  height: 100vh;
-  z-index: -1;
-}
 .movie__highscore {
   position: absolute;
   top: -15px;
@@ -191,22 +175,6 @@ body {
     font-size: 35px;
   }
 
-  .movie__background--left {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 50vw;
-    height: 100vh;
-    z-index: -1;
-  }
-  .movie__background--right {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50vw;
-    height: 100vh;
-    z-index: -1;
-  }
   .movie__highscore {
     position: absolute;
     top: -15px;
@@ -310,22 +278,6 @@ body {
     font-size: 25px;
   }
 
-  .movie__background--left {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 50vw;
-    height: 100vh;
-    z-index: -1;
-  }
-  .movie__background--right {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50vw;
-    height: 100vh;
-    z-index: -1;
-  }
   .movie__highscore {
     position: absolute;
     top: -15px;
@@ -395,22 +347,6 @@ body {
   }
   .movie__re {
     font-size: 18px;
-  }
-  .movie__background--left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-  }
-  .movie__background--right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
   }
   .movie__box {
     display: flex;
